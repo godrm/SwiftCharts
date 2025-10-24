@@ -16,5 +16,5 @@ let package = Package(
                path: "SwiftCharts"
         )
      ],
-     swiftLanguageVersions: [.v5]
+     swiftLanguageVersions: [SwiftVersion.version("6")]
  )
