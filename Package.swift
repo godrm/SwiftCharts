@@ -1,5 +1,12 @@
 // swift-tools-version:5.0
 import PackageDescription
+import Foundation
+
+if compiler(>=6)
+let swiftVersion = [SwiftVersion.version("6")]
+#else
+let swiftVersion = [SwiftVersion.v5]
+#endif
 
 let package = Package(
      name: "SwiftCharts",
@@ -16,5 +23,5 @@ let package = Package(
                path: "SwiftCharts"
         )
      ],
-     swiftLanguageVersions: [SwiftVersion.version("6")]
+     swiftLanguageVersions: swiftVersion
  )
