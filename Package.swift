@@ -1,8 +1,8 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.9
 import PackageDescription
 import Foundation
 
-if compiler(>=6)
+#if compiler(>=6)
 let swiftVersion = [SwiftVersion.version("6")]
 #else
 let swiftVersion = [SwiftVersion.v5]
@@ -11,7 +11,7 @@ let swiftVersion = [SwiftVersion.v5]
 let package = Package(
      name: "SwiftCharts",
      platforms: [
-         .iOS(.v13)
+         .iOS("13.0")
      ],
      products: [
         .library(name: "SwiftCharts", targets: ["SwiftCharts"]),
